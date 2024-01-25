@@ -19,11 +19,13 @@ zone_url="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
 
 ### Download and ingest data into postgres
 ```shell
+cd week1
 docker-compose -f \ docker-compose.yml --env-file=green.env up -d --build
 ```
 
 ### Clean up
 ```shell
+cd week1
 docker-compose -f \ docker-compose.yml down --volumes --remove-orphans
 ```
 ---
