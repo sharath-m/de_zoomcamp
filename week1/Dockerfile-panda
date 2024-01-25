@@ -1,0 +1,10 @@
+FROM python:3.9
+
+RUN apt-get install wget
+RUN pip install pandas sqlalchemy psycopg2-binary
+WORKDIR /app
+COPY ingest_data_improved.py ingest_data_improved.py
+COPY run_data_ingest.sh run_data_ingest.sh
+RUN chmod a+x run_data_ingest.sh
+
+ENTRYPOINT ["/bin/bash", "run_data_ingest.sh"]
