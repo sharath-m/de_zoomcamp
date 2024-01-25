@@ -23,6 +23,7 @@ cd week1
 docker-compose -f \ docker-compose.yml --env-file=green.env up -d --build
 ```
 
+### SQL
 ```postgresql
 -- Q3 Count records
 select count(*)
